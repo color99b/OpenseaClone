@@ -1,0 +1,23 @@
+div {
+  border: 1px solid black;
+}
+
+html {
+  font-family: "Poppins-Medium", sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+#menuBar {
+  display: flex;
+  position: fixed;
+  font-weight: bold;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuBarItem {
+}
+
+.test {
+  height: 50rem;
+}
