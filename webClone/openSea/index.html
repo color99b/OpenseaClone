@@ -10,18 +10,92 @@
   <body>
     <div id="mainBox">
       <div id="menuBar">
-        <div>icon</div>
-        <div>OpenSea</div>
-        <div>input text</div>
-        <div>Explore</div>
-        <div>Stats</div>
-        <div>Resources</div>
-        <div>Create</div>
-        <div>UserImage</div>
-        <div>walletImage</div>
-        <div>cartImage</div>
+        <div id="menuBar_icon">
+          <img src="mainPageIcon/opensea.svg" alt="" style="width: 40px" />
+          <div class="menuBar_text">OpenSea</div>
+        </div>
+        <div id="menuBar_search">
+          <div>
+            <img
+              src="https://cdn0.iconfinder.com/data/icons/multimedia-solid-30px/30/search-128.png"
+              width="20px"
+            />
+          </div>
+          <input
+            type="text"
+            class="search"
+            placeholder="Search items, collections, and accounts"
+            style="min-width: 200px"
+          />
+        </div>
+        <div id="menuBar_function">
+          <div>Explore</div>
+          <div>Stats</div>
+          <div>Resources</div>
+          <div>Create</div>
+          <div><img src="mainPageIcon/user.png" alt="" /></div>
+          <div>
+            <img src="mainPageIcon/wallet.png" alt="" style="width: 30px" />
+          </div>
+          <div>
+            <img src="mainPageIcon/cart.webp" alt="" style="width: 30px" />
+          </div>
+        </div>
       </div>
-      <div id="test">asd</div>
+
+      <div id="mainCenter">
+        <div id="mainBack"></div>
+        <!-- playLogo background에 비디오 -->
+        <div id="playLogo">
+          <div id="videoBox">
+            <video mute autoplay loop>
+              <source src="pattern.mp4" />
+            </video>
+          </div>
+          <div id="textZone">
+            <div id="logoSquare">
+              <img src="mainPageIcon/plLogo.jpg" alt="" class="plLogo" />
+            </div>
+            <div>
+              <span id="title">Probably A Label </span>
+              <img src="mainPageIcon/verify.png" class="verify1" />
+            </div>
+            <div>
+              <span id="subTitle">By probablyalabel </span>
+              <img src="mainPageIcon/verify.png" class="verify2" />
+            </div>
+            <div id="centerBottom">
+              <div id="mainTime">
+                <div class="mainTimeItem">
+                  <span>0</span><br />
+                  Days
+                </div>
+                <div class="mainTimeItem">
+                  <span>7</span><br />
+                  HRS
+                </div>
+                <div class="mainTimeItem">
+                  <span>31</span><br />
+                  MINS
+                </div>
+                <div class="mainTimeItem">
+                  <span>47</span><br />
+                  SECS
+                </div>
+              </div>
+              <div class="view">View drop</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 그리드 시작 -->
+      <div id="trendingList">
+        <div id="trCategory">
+          <div id="trending">Trending</div>
+          <div id="top">Top</div>
+        </div>
+        <hr class="hr1" />
+      </div>
     </div>
   </body>
 </html>
@@ -31,3 +105,7 @@
 <!-- 
     아니면 mediaquerry로 그냥 조정
  -->
+
+<!-- 1600때도 뭔가바뀜 -->
+<!-- 1200때 상단바의 explore stats resources creat 사라짐 -->
+<!-- 맨 div에 동영상 백그라운드로 넣기 연습 -->

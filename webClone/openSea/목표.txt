@@ -1,0 +1,6 @@
+
+김영준 : https://opensea.io/
+1. 메인페이지 구현
+2. NFT 목록 구현
+3. Trending, Top, Art, Collectibles, Domain Names, Music,Photography, Sports, Trading Cards, Utility, Virtual Worlds 목록에 따른 다.른. NFT 목록 출력
+4. 검색 기능

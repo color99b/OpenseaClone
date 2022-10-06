@@ -1,5 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
 div {
-  border: 1px solid black;
+  /* border: 1px solid white; */
 }
 
 html {
@@ -11,13 +19,226 @@ html {
   display: flex;
   position: fixed;
   font-weight: bold;
-  justify-content: space-between;
+  margin-top: 12px;
+  padding: 5px;
+  padding-left: 70px;
   align-items: center;
+  width: 100%;
+  /* 스크롤 내리면 변경 */
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  z-index: 1;
+}
+
+#menuBar_icon {
+  display: flex;
+  flex-direction: row;
+}
+.menuBar_text {
+  margin-top: 10px;
+  margin-left: 5px;
+  font-size: 1.3rem;
+}
+
+#menuBar_search {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 8px;
+  border-radius: 10px;
+  width: calc(100% / 2);
+
+  margin-left: 30px;
+  margin-right: 30px;
+  /* align-items: flex-start; */
+}
+#menuBar_search > input {
+  border: none;
+}
+
+.search {
+  width: 200%;
+}
+
+#menuBar_function {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 600px;
+  justify-content: space-between;
+}
+#menuBar_function > div > img {
+  width: 35px;
+  filter: invert();
+  /* filter invert는 색상반전 */
 }
 
 .menuBarItem {
 }
 
-.test {
-  height: 50rem;
+#mainBox {
+  margin: 0;
+  padding: 0;
+  height: 300rem;
+  /* background: wheat; */
+}
+
+/* -------------------------------------- */
+#mainCenter {
+  /* margin-top: 10px; */
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  color: white;
+  font-size: 3rem;
+
+  z-index: -1;
+  height: 600px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  /* width: 100%; */
+}
+
+#mainBack {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(mainPageIcon/preview.png);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 600px;
+  filter: blur(15px);
+}
+
+#playLogo {
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100rem;
+  height: 29rem;
+  justify-content: flex-end;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  /* background-color: black; */
+}
+
+.verify1 {
+  filter: invert();
+  width: 25px;
+  margin-bottom: 0;
+}
+
+.verify2 {
+  filter: invert();
+  width: 20px;
+  margin-bottom: 0;
+}
+
+#logoSquare {
+  border: 4px solid white;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.plLogo {
+  width: 60px;
+}
+
+#title {
+  font-size: 2rem;
+}
+
+#subTitle {
+  font-size: 1.5rem;
+}
+
+#centerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#mainTime {
+  display: flex;
+  justify-content: space-evenly;
+
+  align-items: center;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 23px;
+}
+
+.mainTimeItem > span {
+  font-size: 1.2rem;
+  font-weight: 1000;
+  margin-top: 5px;
+}
+.mainTimeItem {
+  margin-left: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 8px 13px 2px 13px;
+  border-radius: 5px;
+}
+
+.mainTimeItem:first-child {
+  margin-left: 0;
+}
+
+.view {
+  border: 2px solid white;
+  border-radius: 15px;
+  font-size: 1rem;
+  padding: 15px;
+}
+
+#videoBox {
+  width: 100rem;
+  border-radius: 2rem;
+
+  height: 42rem;
+  overflow: hidden;
+  margin: 0px auto;
+  position: relative;
+}
+
+video {
+  width: max-content;
+  height: max-content;
+  position: relative;
+}
+
+#textZone {
+  /* margin: 0px 0px 10px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  position: absolute;
+  width: 90%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#trendingList {
+  display: flex;
+  padding: 3rem;
+  flex-direction: column;
+}
+
+#trCategory {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+#top {
+  margin-left: 2rem;
+}
+
+#hr1 {
+  color: black;
+  width: 100px;
 }
