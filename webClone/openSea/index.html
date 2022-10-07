@@ -48,9 +48,7 @@
         <!-- playLogo background에 비디오 -->
         <div id="playLogo">
           <div id="videoBox">
-            <video mute autoplay loop>
-              <source src="pattern.mp4" />
-            </video>
+            <video src="pattern.mp4" mute autoplay loop></video>
           </div>
           <div id="textZone">
             <div id="logoSquare">
@@ -88,15 +86,225 @@
           </div>
         </div>
       </div>
-      <!-- 그리드 시작 -->
-      <div id="trendingList">
-        <div id="trCategory">
-          <div id="trending">Trending</div>
-          <div id="top">Top</div>
+      <div id="mainItemList">
+        <!-- 그리드 시작 -->
+        <div id="trendingList">
+          <div id="trCategory">
+            <div id="trending">Trending</div>
+            <div id="top">Top</div>
+          </div>
+          <div id="trCategoryKind">
+            <div class="kindButton">24h</div>
+            <div class="kindButton">View all</div>
+          </div>
         </div>
         <hr class="hr1" />
+        <hr class="hr2" />
+        <hr style="width: 100%; opacity: 0.06; border: solid 0.2px black" />
+        <br />
+        <div id="trendingItemList">
+          <div class="trendingItem">
+            <div id="listName">
+              <div>COLLECTION</div>
+              <div id="listNameRight" class="displayFlex">
+                <div>FLOOR PRICE</div>
+                <div>VOLUME</div>
+              </div>
+            </div>
+            <br />
+            <div id="allList">
+              <div id="listOneItem">
+                <div id="itemSector1">
+                  <div class="list"><span>1</span></div>
+                  <div><img src="mainPageIcon/plLogo.jpg" alt="" /></div>
+                  <div>Probably A Label</div>
+                </div>
+                <div id="itemSector2">
+                  <div>0.19 ETH</div>
+                  <div>363 ETH</div>
+                </div>
+              </div>
+              <div id="listOneItem">
+                <div id="itemSector1">
+                  <div class="list"><span>2</span></div>
+                  <div><img src="mainPageIcon/terrImg.png" alt="" /></div>
+                  <div>Terraforms by Mathcastles</div>
+                </div>
+                <div id="itemSector2">
+                  <div>1.66 ETH</div>
+                  <div>316 ETH</div>
+                </div>
+              </div>
+              <div id="listOneItem">
+                <div id="itemSector1">
+                  <div class="list"><span>3</span></div>
+                  <div><img src="mainPageIcon/digiImg.png" alt="" /></div>
+                  <div style="width: 15rem">
+                    DigiDaigaku Genesis Adventure...Key Castaways
+                  </div>
+                </div>
+                <div id="itemSector2">
+                  <div>0.75 ETH</div>
+                  <div>154 ETH</div>
+                </div>
+              </div>
+              <div id="listOneItem">
+                <div id="itemSector1">
+                  <div class="list"><span>4</span></div>
+                  <div><img src="mainPageIcon/criImg.png" alt="" /></div>
+                  <div>Critters Cult</div>
+                </div>
+                <div id="itemSector2">
+                  <div>29.50 SOL</div>
+                  <div>7,658 SOL</div>
+                </div>
+              </div>
+              <div id="listOneItem">
+                <div id="itemSector1">
+                  <div class="list"><span>5</span></div>
+                  <div><img src="mainPageIcon/tooImg.png" alt="" /></div>
+                  <div>Toonies SC</div>
+                </div>
+                <div id="itemSector2">
+                  <div>0.04 ETH</div>
+                  <div>128 ETH</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="trendingItem">
+            <div id="listName">
+              <div>COLLECTION</div>
+              <div id="listNameRight" class="displayFlex">
+                <div>FLOOR PRICE</div>
+                <div>VOLUME</div>
+              </div>
+            </div>
+            <br />
+            <div id="allList">
+              <div id="listOneItem">
+                <div id="itemSector1">
+                  <div class="list"><span>5</span></div>
+                  <div><img src="mainPageIcon/helImg.png" alt="" /></div>
+                  <div>HELIX Founder Pass Official</div>
+                </div>
+                <div id="itemSector2">
+                  <div>0.20 ETH</div>
+                  <div>307 ETH</div>
+                </div>
+              </div>
+              <div id="listOneItem">
+                <div id="itemSector1">
+                  <div class="list"><span>6</span></div>
+                  <div><img src="mainPageIcon/renImg.gif" alt="" /></div>
+                  <div>RENGA</div>
+                </div>
+                <div id="itemSector2">
+                  <div>2.04 ETH</div>
+                  <div>343 ETH</div>
+                </div>
+              </div>
+              <div id="listOneItem">
+                <div id="itemSector1">
+                  <div class="list"><span>7</span></div>
+                  <div><img src="mainPageIcon/aheImg.png" alt="" /></div>
+                  <div style="width: 15rem">Ahegao Sugar</div>
+                </div>
+                <div id="itemSector2">
+                  <div>7.20 SOL</div>
+                  <div>3,033 SOL</div>
+                </div>
+              </div>
+              <div id="listOneItem">
+                <div id="itemSector1">
+                  <div class="list"><span>8</span></div>
+                  <div><img src="mainPageIcon/souImg.png" alt="" /></div>
+                  <div>Sougen Genesis Collection</div>
+                </div>
+                <div id="itemSector2">
+                  <div>0.05 ETH</div>
+                  <div>67 ETH</div>
+                </div>
+              </div>
+              <div id="listOneItem">
+                <div id="itemSector1">
+                  <div class="list"><span>9</span></div>
+                  <div><img src="mainPageIcon/flaImg.jpg" alt="" /></div>
+                  <div>Flaskies</div>
+                </div>
+                <div id="itemSector2">
+                  <div>-</div>
+                  <div>2,352 SOL</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- trending 끝 -->
+        </div>
+
+        <div class="fontBlack">New and notable</div>
+        <br />
+        <div id="buttonDiv">
+          <button id="prev">
+            <img src="mainPageIcon/left.png" alt="" />
+          </button>
+          <button id="next">
+            <img src="mainPageIcon/right.png" alt="" />
+          </button>
+          <div id="slideImg">
+            <div id="image_container">
+              <div class="imageItem">
+                <div class="backZone" id="backZoneItem1"></div>
+                <!-- <img src="mainPageIcon/preview.png" alt="" id="content1" /> -->
+                <div class="imageText">
+                  <div><img src="mainPageIcon/plLogo.jpg" alt="" /></div>
+                  <div><p>Probably A Label</p></div>
+                </div>
+              </div>
+
+              <div class="imageItem">
+                <div class="backZone" id="backZoneItem2"></div>
+
+                <div class="imageText">
+                  <div><img src="mainPageIcon/fyaLogo.png" alt="" /></div>
+                  <div><p>Fyat Lux ( Dawn Collection)</p></div>
+                </div>
+              </div>
+
+              <div class="imageItem">
+                <div class="backZone" id="backZoneItem3"></div>
+
+                <div class="imageText">
+                  <div><img src="mainPageIcon/somLogo.webp" alt="" /></div>
+                  <div><p>Somnium Space VR</p></div>
+                </div>
+              </div>
+
+              <div class="imageItem">
+                <div class="backZone" id="backZoneItem4"></div>
+
+                <div class="imageText">
+                  <div><img src="mainPageIcon/theLogo.gif" alt="" /></div>
+                  <div><p>Great Color Study</p></div>
+                </div>
+              </div>
+
+              <div class="imageItem">
+                <div class="backZone" id="backZoneItem5"></div>
+
+                <div class="imageText">
+                  <div><img src="mainPageIcon/bowLogo.png" alt="" /></div>
+                  <div><p>Bowie on the Blockchain</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- mainItem끝 -->
       </div>
+      asd
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
 <!-- 최대일때, 줄었을때, 모바일일 때 등 경우를 각각 고정으로 해놓고
