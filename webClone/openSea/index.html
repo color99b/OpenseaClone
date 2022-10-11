@@ -6,6 +6,7 @@
     <title>OpenSea, the largest NFT marketplace</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="fonts.css" />
+    <link rel="icon" href="mainPageIcon/favicon.ico" />
   </head>
   <body>
     <div id="mainBox">
@@ -23,22 +24,162 @@
           </div>
           <input
             type="text"
-            class="search"
+            id="search"
             placeholder="Search items, collections, and accounts"
-            style="min-width: 200px"
+            style="min-width: 200px; border: none"
           />
         </div>
+
         <div id="menuBar_function">
-          <div>Explore</div>
-          <div>Stats</div>
-          <div>Resources</div>
+          <div class="dropdown">
+            <div>Explore</div>
+            <div class="dropdown-content">
+              <a href="#">
+                <div><img src="mainPageIcon/allnfts-light.svg" alt="" /></div>
+                <div>All NFTs</div>
+              </a>
+              <a href="#">
+                <div><img src="mainPageIcon/solana-light.svg" alt="" /></div>
+                <div>Solana NFTs</div>
+              </a>
+              <a href="#">
+                <div><img src="mainPageIcon/art-light.svg" alt="" /></div>
+                <div>Art</div>
+              </a>
+              <a href="#">
+                <div>
+                  <img src="mainPageIcon/collectibles-light.svg" alt="" />
+                </div>
+                <div>Collectibles</div>
+              </a>
+              <a href="#">
+                <div>
+                  <img src="mainPageIcon/domain-names-light.svg" alt="" />
+                </div>
+                <div>Domain Names</div>
+              </a>
+
+              <a href="#">
+                <div>
+                  <img src="mainPageIcon/music-light.svg" alt="" />
+                </div>
+                <div>Music</div>
+              </a>
+
+              <a href="#">
+                <div>
+                  <img
+                    src="mainPageIcon/photography-category-light.svg"
+                    alt=""
+                  />
+                </div>
+                <div>Photography</div>
+              </a>
+
+              <a href="#">
+                <div>
+                  <img src="mainPageIcon/sports-light.svg" alt="" />
+                </div>
+                <div>Sports</div>
+              </a>
+
+              <a href="#">
+                <div>
+                  <img src="mainPageIcon/trading-cards-light.svg" alt="" />
+                </div>
+                <div>Trading Cards</div>
+              </a>
+
+              <a href="#">
+                <div>
+                  <img src="mainPageIcon/utility-light.svg" alt="" />
+                </div>
+                <div>Utility</div>
+              </a>
+              <a href="#">
+                <div>
+                  <img src="mainPageIcon/virtual-worlds-light.svg" alt="" />
+                </div>
+                <div>Virtual Worlds</div>
+              </a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <div>Stats</div>
+            <div class="dropdown-content">
+              <a href="#">
+                <div>Rankings</div>
+              </a>
+              <a href="#">
+                <div>Activity</div>
+              </a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <div>Resources</div>
+            <div class="dropdown-content">
+              <a href="#">
+                <div>Learn</div>
+              </a>
+              <a href="#">
+                <div>Help Center</div>
+              </a>
+              <a href="#">
+                <div>Platform Status</div>
+              </a>
+              <a href="#">
+                <div>Partners</div>
+              </a>
+              <a href="#">
+                <div>Taxes</div>
+              </a>
+              <a href="#">
+                <div>Blog</div>
+              </a>
+              <a href="#">
+                <div>Docs</div>
+              </a>
+              <a href="#">
+                <div>Newsletter</div>
+              </a>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 0.3rem;
+                "
+              >
+                <img src="mainPageIcon/twit.png" alt="" />
+
+                <img src="mainPageIcon/insta.png" alt="" />
+
+                <img src="mainPageIcon/discord.png" alt="" />
+
+                <img src="mainPageIcon/reddit.png" alt="" />
+
+                <img src="mainPageIcon/youtube.png" alt="" />
+
+                <img src="mainPageIcon/tictok.png" alt="" />
+              </div>
+            </div>
+          </div>
           <div>Create</div>
-          <div><img src="mainPageIcon/user.png" alt="" /></div>
+          <div><img class="menuIcon" src="mainPageIcon/user.png" alt="" /></div>
           <div>
-            <img src="mainPageIcon/wallet.png" alt="" style="width: 30px" />
+            <img
+              class="menuIcon"
+              src="mainPageIcon/wallet.png"
+              alt=""
+              style="width: 30px"
+            />
           </div>
           <div>
-            <img src="mainPageIcon/cart.webp" alt="" style="width: 30px" />
+            <img
+              class="menuIcon"
+              src="mainPageIcon/cart.webp"
+              alt=""
+              style="width: 30px"
+            />
           </div>
         </div>
       </div>
@@ -300,9 +441,284 @@
             </div>
           </div>
         </div>
+        <br />
+        <br />
+        <br />
+
+        <div class="fontBlack">WGMI Community spotlight</div>
+        <br />
+        <div id="buttonDiv2">
+          <button id="prev2">
+            <img src="mainPageIcon/left.png" alt="" />
+          </button>
+          <button id="next2">
+            <img src="mainPageIcon/right.png" alt="" />
+          </button>
+          <div id="slideImg2">
+            <div id="image_container2">
+              <!-- <div class="imageItem">
+                <div class="backZone" id="backZone2Item1"></div>
+             <img src="mainPageIcon/preview.png" alt="" id="content1" /> 
+                <div class="imageText">
+                  <div><img src="mainPageIcon/mfLogo.png" alt="" /></div>
+                  <div><p>Probably A Label</p></div>
+                </div>
+              </div> -->
+
+              <div class="imageItem2">
+                <div class="backZone" id="backZone2Item1"></div>
+
+                <div class="imageText">
+                  <div><img src="mainPageIcon/mfLogo.png" alt="" /></div>
+                  <div><p>mfers</p></div>
+                </div>
+              </div>
+
+              <div class="imageItem2">
+                <div class="backZone" id="backZone2Item2"></div>
+
+                <div class="imageText">
+                  <div><img src="mainPageIcon/inLogo.png" alt="" /></div>
+                  <div><p>Invisible Friends</p></div>
+                </div>
+              </div>
+
+              <div class="imageItem2">
+                <div class="backZone" id="backZone2Item3"></div>
+
+                <div class="imageText">
+                  <div><img src="mainPageIcon/sapLogo.png" alt="" /></div>
+                  <div><p>Sappy Seals</p></div>
+                </div>
+              </div>
+
+              <div class="imageItem2">
+                <div class="backZone" id="backZone2Item4"></div>
+
+                <div class="imageText">
+                  <div><img src="mainPageIcon/llLogo.png" alt="" /></div>
+                  <div><p>Lamaverse Genesis</p></div>
+                </div>
+              </div>
+
+              <div class="imageItem2">
+                <div class="backZone" id="backZone2Item5"></div>
+
+                <div class="imageText">
+                  <div><img src="mainPageIcon/vflogo.png" alt="" /></div>
+                  <div><p>VeeFriends Series 2</p></div>
+                </div>
+              </div>
+
+              <div class="imageItem2">
+                <div class="backZone" id="backZone2Item6"></div>
+
+                <div class="imageText">
+                  <div><img src="mainPageIcon/minLogo.png" alt="" /></div>
+                  <div><p>Mindblowon Universe</p></div>
+                </div>
+              </div>
+
+              <div class="imageItem2">
+                <div class="backZone" id="backZone2Item7"></div>
+
+                <div class="imageText">
+                  <div><img src="mainPageIcon/potLogo.gif" alt="" /></div>
+                  <div><p>The Potatoz</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="fontBlack">Browse by category</div>
+        <br />
+        <div id="gridItem_container">
+          <div class="imageGridItem">
+            <div class="backZone" id="backZoneGridItem1"></div>
+
+            <div class="imageTextGrid">
+              <div><p>Art</p></div>
+            </div>
+          </div>
+          <div class="imageGridItem">
+            <div class="backZone" id="backZoneGridItem2"></div>
+
+            <div class="imageTextGrid">
+              <div><p>Music</p></div>
+            </div>
+          </div>
+          <div class="imageGridItem">
+            <div class="backZone" id="backZoneGridItem3"></div>
+
+            <div class="imageTextGrid">
+              <div><p>Trading Cards</p></div>
+            </div>
+          </div>
+          <!-- 2번째 줄 --><br /><br /><br />
+          <div class="imageGridItem">
+            <div class="backZone" id="backZoneGridItem4"></div>
+
+            <div class="imageTextGrid">
+              <div><p>Collectibles</p></div>
+            </div>
+          </div>
+
+          <div class="imageGridItem">
+            <div class="backZone" id="backZoneGridItem5"></div>
+
+            <div class="imageTextGrid">
+              <div><p>Photography</p></div>
+            </div>
+          </div>
+
+          <div class="imageGridItem">
+            <div class="backZone" id="backZoneGridItem6"></div>
+
+            <div class="imageTextGrid">
+              <div><p>Utility</p></div>
+            </div>
+          </div>
+          <!-- 3번째줄  -->
+
+          <div class="imageGridItem">
+            <div class="backZone" id="backZoneGridItem7"></div>
+
+            <div class="imageTextGrid">
+              <div><p>Domain Names</p></div>
+            </div>
+          </div>
+
+          <div class="imageGridItem">
+            <div class="backZone" id="backZoneGridItem8"></div>
+
+            <div class="imageTextGrid">
+              <div><p>Sports</p></div>
+            </div>
+          </div>
+
+          <div class="imageGridItem">
+            <div class="backZone" id="backZoneGridItem9"></div>
+
+            <div class="imageTextGrid">
+              <div><p>Virtual Worlds</p></div>
+            </div>
+          </div>
+        </div>
         <!-- mainItem끝 -->
       </div>
-      asd
+    </div>
+    <div id="more">
+      <div id="moreUp">
+        <div id="upLeft">
+          <p class="big">Stay in the loop</p>
+
+          Join our mailing list to stay in the loop with our newest feature
+          releases, NFT drops, and tips and tricks for navigating OpenSea.
+          <div>
+            <input
+              type="text"
+              placeholder="Your email address"
+              id="emailInput"
+            />
+            <button id="signUp">Sign up</button>
+          </div>
+        </div>
+        <div id="upRight">
+          <p class="big">Join the community</p>
+          <div>
+            <button><img src="mainPageIcon/twit.png" alt="" /></button>
+            <button><img src="mainPageIcon/insta.png" alt="" /></button>
+            <button><img src="mainPageIcon/discord.png" alt="" /></button>
+            <button><img src="mainPageIcon/reddit.png" alt="" /></button>
+
+            <button><img src="mainPageIcon/youtube.png" alt="" /></button>
+            <button><img src="mainPageIcon/tictok.png" alt="" /></button>
+            <button><img src="mainPageIcon/email.png" alt="" /></button>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div id="moreDown">
+        <div id="openSeaWhite">
+          <div>
+            <img
+              src="mainPageIcon/opensea-white.svg"
+              alt=""
+              style="width: 40px"
+            />
+          </div>
+          <p class="big">OpenSea</p>
+          <p class="small">
+            The world’s first and largest digital marketplace for crypto
+            collectibles and non-fungible tokens (NFTs). Buy, sell, and discover
+            exclusive digital items.
+          </p>
+        </div>
+        <div class="moreList">
+          <p class="middle">Marketplace</p>
+          <p class="small2">All NFTs</p>
+          <p class="small2">Solana NFTs</p>
+          <p class="small2">Art</p>
+          <p class="small2">Collectibles</p>
+          <p class="small2">Domain Names</p>
+          <p class="small2">Music</p>
+          <p class="small2">Photography</p>
+          <p class="small2">Sports</p>
+          <p class="small2">Trading Cards</p>
+          <p class="small2">Utility</p>
+          <p class="small2">Virtual Worlds</p>
+        </div>
+
+        <div class="moreList" id="listUnder">
+          <p class="middle">My Account</p>
+
+          <div class="moreList">
+            <p class="small2">Profile</p>
+            <p class="small2">Favorites</p>
+            <p class="small2">Watchlist</p>
+            <p class="small2">My Collections</p>
+            <p class="small2">Settings</p>
+          </div>
+
+          <p class="middle">Stats</p>
+
+          <div class="moreList">
+            <p class="small2">Rankings</p>
+            <p class="small2">Activity</p>
+          </div>
+        </div>
+
+        <div class="moreList">
+          <p class="middle">Learn</p>
+          <p class="small2">Help Center</p>
+          <p class="small2">Platform Status</p>
+          <p class="small2">Partners</p>
+          <p class="small2">Taxes</p>
+          <p class="small2">Blog</p>
+          <p class="small2">Docs</p>
+          <p class="small2">Newsletter</p>
+        </div>
+        <div class="moreList">
+          <p class="middle">About</p>
+          <p class="small2">Careers</p>
+          <p class="small2">Ventures</p>
+          <p class="small2">Grants</p>
+        </div>
+      </div>
+      <hr />
+      <div id="services">
+        <div>ⓒ 2018-2022 Ozone Networks, Inc</div>
+        <div id="servicesRight">
+          <div>Privacy Policy</div>
+          <div>Terms of Service</div>
+        </div>
+      </div>
+      <div id="test">우라라라</div>
     </div>
     <script src="index.js"></script>
   </body>
