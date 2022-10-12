@@ -22,51 +22,94 @@
               width="20px"
             />
           </div>
-          <input
+
+          <div class="dropdown">
+            <input
+              type="text"
+              id="search"
+              placeholder="Search items, collections, and accounts"
+              style="min-width: 200px; border: none"
+              autocomplete="off"
+              onkeyup="filter()"
+            />
+            <div class="dropdown-content" id="searchDrop">
+              <a href="#"
+                ><div class="listSearchItem">
+                  <div class="itemSector1">
+                    <div class="list"><span>1</span></div>
+                    <div><img src="mainPageIcon/plLogo.jpg" alt="" /></div>
+                    <div class="searchName">Probably A Label</div>
+                  </div>
+                  <div class="itemSector2">
+                    <div>0.19 ETH</div>
+
+                    <div class="volume">363 ETH</div>
+                  </div>
+                </div>
+              </a>
+              <a href="#">
+                <div class="listSearchItem">
+                  <div class="itemSector1">
+                    <div class="list"><span>1</span></div>
+                    <div><img src="mainPageIcon/plLogo.jpg" alt="" /></div>
+                    <div class="searchName">bcde</div>
+                  </div>
+                  <div class="itemSector2">
+                    <div>0.19 ETH</div>
+
+                    <div class="volume">363 ETH</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- <input
             type="text"
             id="search"
             placeholder="Search items, collections, and accounts"
             style="min-width: 200px; border: none"
-          />
+            autocomplete="off"
+            onkeyup="filter()"
+          /> -->
         </div>
 
         <div id="menuBar_function">
           <div class="dropdown">
             <div>Explore</div>
             <div class="dropdown-content">
-              <a href="#">
+              <a href="#" class="dropList">
                 <div><img src="mainPageIcon/allnfts-light.svg" alt="" /></div>
                 <div>All NFTs</div>
               </a>
-              <a href="#">
+              <a href="#" class="dropList">
                 <div><img src="mainPageIcon/solana-light.svg" alt="" /></div>
                 <div>Solana NFTs</div>
               </a>
-              <a href="#">
+              <a href="#" class="dropList">
                 <div><img src="mainPageIcon/art-light.svg" alt="" /></div>
                 <div>Art</div>
               </a>
-              <a href="#">
+              <a href="#" class="dropList">
                 <div>
                   <img src="mainPageIcon/collectibles-light.svg" alt="" />
                 </div>
                 <div>Collectibles</div>
               </a>
-              <a href="#">
+              <a href="#" class="dropList">
                 <div>
                   <img src="mainPageIcon/domain-names-light.svg" alt="" />
                 </div>
                 <div>Domain Names</div>
               </a>
 
-              <a href="#">
+              <a href="#" class="dropList">
                 <div>
                   <img src="mainPageIcon/music-light.svg" alt="" />
                 </div>
                 <div>Music</div>
               </a>
 
-              <a href="#">
+              <a href="#" class="dropList">
                 <div>
                   <img
                     src="mainPageIcon/photography-category-light.svg"
@@ -76,27 +119,27 @@
                 <div>Photography</div>
               </a>
 
-              <a href="#">
+              <a href="#" class="dropList">
                 <div>
                   <img src="mainPageIcon/sports-light.svg" alt="" />
                 </div>
                 <div>Sports</div>
               </a>
 
-              <a href="#">
+              <a href="#" class="dropList">
                 <div>
                   <img src="mainPageIcon/trading-cards-light.svg" alt="" />
                 </div>
                 <div>Trading Cards</div>
               </a>
 
-              <a href="#">
+              <a href="#" class="dropList">
                 <div>
                   <img src="mainPageIcon/utility-light.svg" alt="" />
                 </div>
                 <div>Utility</div>
               </a>
-              <a href="#">
+              <a href="#" class="dropList">
                 <div>
                   <img src="mainPageIcon/virtual-worlds-light.svg" alt="" />
                 </div>
@@ -106,7 +149,7 @@
           </div>
           <div class="dropdown">
             <div>Stats</div>
-            <div class="dropdown-content">
+            <div class="dropdown-content" id="stats">
               <a href="#">
                 <div>Rankings</div>
               </a>
@@ -117,7 +160,7 @@
           </div>
           <div class="dropdown">
             <div>Resources</div>
-            <div class="dropdown-content">
+            <div class="dropdown-content" id="res">
               <a href="#">
                 <div>Learn</div>
               </a>
@@ -206,19 +249,19 @@
             <div id="centerBottom">
               <div id="mainTime">
                 <div class="mainTimeItem">
-                  <span>0</span><br />
+                  <span id="days">0</span><br />
                   Days
                 </div>
                 <div class="mainTimeItem">
-                  <span>7</span><br />
+                  <span id="hrs">7</span><br />
                   HRS
                 </div>
                 <div class="mainTimeItem">
-                  <span>31</span><br />
+                  <span id="mins">5</span><br />
                   MINS
                 </div>
                 <div class="mainTimeItem">
-                  <span>47</span><br />
+                  <span id="secs">21</span><br />
                   SECS
                 </div>
               </div>
@@ -231,82 +274,88 @@
         <!-- 그리드 시작 -->
         <div id="trendingList">
           <div id="trCategory">
-            <div id="trending">Trending</div>
-            <div id="top">Top</div>
+            <div id="trending" class="category" onclick="viewList(1)">
+              Trending
+            </div>
+            <div id="top" class="category" onclick="viewList(2)">Top</div>
           </div>
           <div id="trCategoryKind">
             <div class="kindButton">24h</div>
             <div class="kindButton">View all</div>
           </div>
         </div>
-        <hr class="hr1" />
-        <hr class="hr2" />
-        <hr style="width: 100%; opacity: 0.06; border: solid 0.2px black" />
+        <hr id="hr1" />
+        <hr id="hr2" />
+        <hr
+          style="width: 100%; opacity: 0.06; border: solid 0.2px black"
+          id="hr3"
+        />
         <br />
         <div id="trendingItemList">
           <div class="trendingItem">
-            <div id="listName">
+            <div class="listName">
               <div>COLLECTION</div>
-              <div id="listNameRight" class="displayFlex">
+              <div class="displayFlex">
                 <div>FLOOR PRICE</div>
                 <div>VOLUME</div>
               </div>
             </div>
             <br />
-            <div id="allList">
-              <div id="listOneItem">
-                <div id="itemSector1">
+            <div class="allList">
+              <div class="listOneItem">
+                <div class="itemSector1">
                   <div class="list"><span>1</span></div>
                   <div><img src="mainPageIcon/plLogo.jpg" alt="" /></div>
-                  <div>Probably A Label</div>
+                  <div class="name">Probably A Label</div>
                 </div>
-                <div id="itemSector2">
+                <div class="itemSector2">
                   <div>0.19 ETH</div>
-                  <div>363 ETH</div>
+
+                  <div class="volume">363 ETH</div>
                 </div>
               </div>
-              <div id="listOneItem">
-                <div id="itemSector1">
+              <div class="listOneItem">
+                <div class="itemSector1">
                   <div class="list"><span>2</span></div>
                   <div><img src="mainPageIcon/terrImg.png" alt="" /></div>
-                  <div>Terraforms by Mathcastles</div>
+                  <div class="name">Terraforms by Mathcastles</div>
                 </div>
-                <div id="itemSector2">
+                <div class="itemSector2">
                   <div>1.66 ETH</div>
                   <div>316 ETH</div>
                 </div>
               </div>
-              <div id="listOneItem">
-                <div id="itemSector1">
+              <div class="listOneItem">
+                <div class="itemSector1">
                   <div class="list"><span>3</span></div>
                   <div><img src="mainPageIcon/digiImg.png" alt="" /></div>
-                  <div style="width: 15rem">
+                  <div class="name" style="width: 15rem">
                     DigiDaigaku Genesis Adventure...Key Castaways
                   </div>
                 </div>
-                <div id="itemSector2">
+                <div class="itemSector2">
                   <div>0.75 ETH</div>
                   <div>154 ETH</div>
                 </div>
               </div>
-              <div id="listOneItem">
-                <div id="itemSector1">
+              <div class="listOneItem">
+                <div class="itemSector1">
                   <div class="list"><span>4</span></div>
                   <div><img src="mainPageIcon/criImg.png" alt="" /></div>
-                  <div>Critters Cult</div>
+                  <div class="name">Critters Cult</div>
                 </div>
-                <div id="itemSector2">
+                <div class="itemSector2">
                   <div>29.50 SOL</div>
                   <div>7,658 SOL</div>
                 </div>
               </div>
-              <div id="listOneItem">
-                <div id="itemSector1">
+              <div class="listOneItem">
+                <div class="itemSector1">
                   <div class="list"><span>5</span></div>
                   <div><img src="mainPageIcon/tooImg.png" alt="" /></div>
-                  <div>Toonies SC</div>
+                  <div class="name">Toonies SC</div>
                 </div>
-                <div id="itemSector2">
+                <div class="itemSector2">
                   <div>0.04 ETH</div>
                   <div>128 ETH</div>
                 </div>
@@ -314,68 +363,232 @@
             </div>
           </div>
           <div class="trendingItem">
-            <div id="listName">
+            <div class="listName">
               <div>COLLECTION</div>
-              <div id="listNameRight" class="displayFlex">
+              <div class="displayFlex">
                 <div>FLOOR PRICE</div>
                 <div>VOLUME</div>
               </div>
             </div>
             <br />
-            <div id="allList">
-              <div id="listOneItem">
-                <div id="itemSector1">
+            <div class="allList">
+              <div class="listOneItem">
+                <div class="itemSector1">
                   <div class="list"><span>5</span></div>
                   <div><img src="mainPageIcon/helImg.png" alt="" /></div>
-                  <div>HELIX Founder Pass Official</div>
+                  <div class="name">HELIX Founder Pass Official</div>
                 </div>
-                <div id="itemSector2">
+                <div class="itemSector2">
                   <div>0.20 ETH</div>
                   <div>307 ETH</div>
                 </div>
               </div>
-              <div id="listOneItem">
-                <div id="itemSector1">
+              <div class="listOneItem">
+                <div class="itemSector1">
                   <div class="list"><span>6</span></div>
                   <div><img src="mainPageIcon/renImg.gif" alt="" /></div>
-                  <div>RENGA</div>
+                  <div class="name">RENGA</div>
                 </div>
-                <div id="itemSector2">
+                <div class="itemSector2">
                   <div>2.04 ETH</div>
                   <div>343 ETH</div>
                 </div>
               </div>
-              <div id="listOneItem">
-                <div id="itemSector1">
+              <div class="listOneItem">
+                <div class="itemSector1">
                   <div class="list"><span>7</span></div>
                   <div><img src="mainPageIcon/aheImg.png" alt="" /></div>
-                  <div style="width: 15rem">Ahegao Sugar</div>
+                  <div class="name" style="width: 15rem">Ahegao Sugar</div>
                 </div>
-                <div id="itemSector2">
+                <div class="itemSector2">
                   <div>7.20 SOL</div>
                   <div>3,033 SOL</div>
                 </div>
               </div>
-              <div id="listOneItem">
-                <div id="itemSector1">
+              <div class="listOneItem">
+                <div class="itemSector1">
                   <div class="list"><span>8</span></div>
                   <div><img src="mainPageIcon/souImg.png" alt="" /></div>
-                  <div>Sougen Genesis Collection</div>
+                  <div class="name">Sougen Genesis Collection</div>
                 </div>
-                <div id="itemSector2">
+                <div class="itemSector2">
                   <div>0.05 ETH</div>
                   <div>67 ETH</div>
                 </div>
               </div>
-              <div id="listOneItem">
-                <div id="itemSector1">
+              <div class="listOneItem">
+                <div class="itemSector1">
                   <div class="list"><span>9</span></div>
                   <div><img src="mainPageIcon/flaImg.jpg" alt="" /></div>
-                  <div>Flaskies</div>
+                  <div class="name">Flaskies</div>
                 </div>
-                <div id="itemSector2">
+                <div class="itemSector2">
                   <div>-</div>
                   <div>2,352 SOL</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- trending 끝 -->
+        </div>
+
+        <div id="topItemList">
+          <div class="topItem">
+            <div class="listName">
+              <div>COLLECTION</div>
+              <div class="displayFlex">
+                <div>FLOOR PRICE</div>
+                <div>VOLUME</div>
+              </div>
+            </div>
+            <br />
+            <div class="allList">
+              <div class="listOneItem">
+                <div class="itemSector1">
+                  <div class="list"><span>1</span></div>
+                  <div><img src="mainPageIcon/othLogo.png" alt="" /></div>
+                  <div class="name">Otherdeed for Otherside</div>
+                </div>
+                <div class="itemSector2">
+                  <div>1.75 ETH</div>
+                  <div class="coin">
+                    <div class="volume">299 ETH</div>
+                    <div class="volumePercentUp">+30%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="listOneItem">
+                <div class="itemSector1">
+                  <div class="list"><span>2</span></div>
+                  <div><img src="mainPageIcon/LookiLogo.jpg" alt="" /></div>
+                  <div class="name">Looki</div>
+                </div>
+                <div class="itemSector2">
+                  <div>1.24 ETH</div>
+                  <div class="coin">
+                    <div class="volume">180 ETH</div>
+                    <div class="volumePercentDown">-13%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="listOneItem">
+                <div class="itemSector1">
+                  <div class="list"><span>3</span></div>
+                  <div><img src="mainPageIcon/hellogo.png" alt="" /></div>
+                  <div class="name" style="width: 15rem">
+                    HELIX Founder Pass Official
+                  </div>
+                </div>
+                <div class="itemSector2">
+                  <div>0.25 ETH</div>
+                  <div class="coin">
+                    <div class="volume">105 ETH</div>
+                    <div class="volumePercentDown">-3%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="listOneItem">
+                <div class="itemSector1">
+                  <div class="list"><span>4</span></div>
+                  <div><img src="mainPageIcon/ehterLogo.png" alt="" /></div>
+                  <div class="name">.ether Name Service</div>
+                </div>
+                <div class="itemSector2">
+                  <div>&lt 0.01 ETH</div>
+                  <div class="coin">
+                    <div class="volume">71 ETH</div>
+                    <div class="volumePercentUp">+7%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="listOneItem">
+                <div class="itemSector1">
+                  <div class="list"><span>5</span></div>
+                  <div><img src="mainPageIcon/8logo.gif" alt="" /></div>
+                  <div class="name">8liens NFT</div>
+                </div>
+                <div class="itemSector2">
+                  <div>0.12 ETH</div>
+                  <div>78 ETH</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="topItem">
+            <div class="listName">
+              <div>COLLECTION</div>
+              <div class="displayFlex">
+                <div>FLOOR PRICE</div>
+                <div>VOLUME</div>
+              </div>
+            </div>
+            <br />
+            <div class="allList">
+              <div class="listOneItem">
+                <div class="itemSector1">
+                  <div class="list"><span>5</span></div>
+                  <div><img src="mainPageIcon/streetLogo.jpg" alt="" /></div>
+                  <div class="name">StreetMachine</div>
+                </div>
+                <div class="itemSector2">
+                  <div>0.29 ETH</div>
+                  <div class="coin">
+                    <div class="volume">156 ETH</div>
+                    <div class="volumePercentUp">+2%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="listOneItem">
+                <div class="itemSector1">
+                  <div class="list"><span>6</span></div>
+                  <div><img src="mainPageIcon/Rare Ape.png" alt="" /></div>
+                  <div class="name">Rare Ape Yacht Club</div>
+                </div>
+                <div class="itemSector2">
+                  <div>0.04 ETH</div>
+                  <div class="coin">
+                    <div class="volume">59 ETH</div>
+                    <div class="volumePercentUp">+5%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="listOneItem">
+                <div class="itemSector1">
+                  <div class="list"><span>7</span></div>
+                  <div><img src="mainPageIcon/theLogo.png" alt="" /></div>
+                  <div class="name" style="width: 15rem">TheLastAbyss</div>
+                </div>
+                <div class="itemSector2">
+                  <div>0.11 ETH</div>
+                  <div class="coin">
+                    <div class="volume">45 ETH</div>
+                    <div class="volumePercentDown">-1%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="listOneItem">
+                <div class="itemSector1">
+                  <div class="list"><span>8</span></div>
+                  <div><img src="mainPageIcon/eleLogo.png" alt="" /></div>
+                  <div class="name">Elevated DeadGods</div>
+                </div>
+                <div class="itemSector2">
+                  <div>1.97 SOL</div>
+                  <div>2,762 SOL</div>
+                </div>
+              </div>
+              <div class="listOneItem">
+                <div class="itemSector1">
+                  <div class="list"><span>9</span></div>
+                  <div><img src="mainPageIcon/AmaLogo.png" alt="" /></div>
+                  <div class="name">AMAi-NFT</div>
+                </div>
+                <div class="itemSector2">
+                  <div>0.04 ETH</div>
+                  <div class="coin">
+                    <div class="volume">36 ETH</div>
+                    <div class="volumePercentDown">-72%</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -395,7 +608,9 @@
           <div id="slideImg">
             <div id="image_container">
               <div class="imageItem">
-                <div class="backZone" id="backZoneItem1"></div>
+                <div class="backZoneBackCover">
+                  <div class="backZone" id="backZoneItem1"></div>
+                </div>
                 <!-- <img src="mainPageIcon/preview.png" alt="" id="content1" /> -->
                 <div class="imageText">
                   <div><img src="mainPageIcon/plLogo.jpg" alt="" /></div>
@@ -404,8 +619,9 @@
               </div>
 
               <div class="imageItem">
-                <div class="backZone" id="backZoneItem2"></div>
-
+                <div class="backZoneBackCover">
+                  <div class="backZone" id="backZoneItem2"></div>
+                </div>
                 <div class="imageText">
                   <div><img src="mainPageIcon/fyaLogo.png" alt="" /></div>
                   <div><p>Fyat Lux ( Dawn Collection)</p></div>
@@ -413,8 +629,9 @@
               </div>
 
               <div class="imageItem">
-                <div class="backZone" id="backZoneItem3"></div>
-
+                <div class="backZoneBackCover">
+                  <div class="backZone" id="backZoneItem3"></div>
+                </div>
                 <div class="imageText">
                   <div><img src="mainPageIcon/somLogo.webp" alt="" /></div>
                   <div><p>Somnium Space VR</p></div>
@@ -422,8 +639,9 @@
               </div>
 
               <div class="imageItem">
-                <div class="backZone" id="backZoneItem4"></div>
-
+                <div class="backZoneBackCover">
+                  <div class="backZone" id="backZoneItem4"></div>
+                </div>
                 <div class="imageText">
                   <div><img src="mainPageIcon/theLogo.gif" alt="" /></div>
                   <div><p>Great Color Study</p></div>
@@ -431,8 +649,9 @@
               </div>
 
               <div class="imageItem">
-                <div class="backZone" id="backZoneItem5"></div>
-
+                <div class="backZoneBackCover">
+                  <div class="backZone" id="backZoneItem5"></div>
+                </div>
                 <div class="imageText">
                   <div><img src="mainPageIcon/bowLogo.png" alt="" /></div>
                   <div><p>Bowie on the Blockchain</p></div>
@@ -457,7 +676,8 @@
           <div id="slideImg2">
             <div id="image_container2">
               <!-- <div class="imageItem">
-                <div class="backZone" id="backZone2Item1"></div>
+                <div class="backZoneBackCover">
+                <div class="backZone" id="backZo</div>ne2Item1"></div>
              <img src="mainPageIcon/preview.png" alt="" id="content1" /> 
                 <div class="imageText">
                   <div><img src="mainPageIcon/mfLogo.png" alt="" /></div>
@@ -466,8 +686,9 @@
               </div> -->
 
               <div class="imageItem2">
-                <div class="backZone" id="backZone2Item1"></div>
-
+                <div class="backZoneBackCover">
+                  <div class="backZone" id="backZone2Item1"></div>
+                </div>
                 <div class="imageText">
                   <div><img src="mainPageIcon/mfLogo.png" alt="" /></div>
                   <div><p>mfers</p></div>
@@ -475,8 +696,9 @@
               </div>
 
               <div class="imageItem2">
-                <div class="backZone" id="backZone2Item2"></div>
-
+                <div class="backZoneBackCover">
+                  <div class="backZone" id="backZone2Item2"></div>
+                </div>
                 <div class="imageText">
                   <div><img src="mainPageIcon/inLogo.png" alt="" /></div>
                   <div><p>Invisible Friends</p></div>
@@ -484,8 +706,9 @@
               </div>
 
               <div class="imageItem2">
-                <div class="backZone" id="backZone2Item3"></div>
-
+                <div class="backZoneBackCover">
+                  <div class="backZone" id="backZone2Item3"></div>
+                </div>
                 <div class="imageText">
                   <div><img src="mainPageIcon/sapLogo.png" alt="" /></div>
                   <div><p>Sappy Seals</p></div>
@@ -493,8 +716,9 @@
               </div>
 
               <div class="imageItem2">
-                <div class="backZone" id="backZone2Item4"></div>
-
+                <div class="backZoneBackCover">
+                  <div class="backZone" id="backZone2Item4"></div>
+                </div>
                 <div class="imageText">
                   <div><img src="mainPageIcon/llLogo.png" alt="" /></div>
                   <div><p>Lamaverse Genesis</p></div>
@@ -502,8 +726,9 @@
               </div>
 
               <div class="imageItem2">
-                <div class="backZone" id="backZone2Item5"></div>
-
+                <div class="backZoneBackCover">
+                  <div class="backZone" id="backZone2Item5"></div>
+                </div>
                 <div class="imageText">
                   <div><img src="mainPageIcon/vflogo.png" alt="" /></div>
                   <div><p>VeeFriends Series 2</p></div>
@@ -511,8 +736,9 @@
               </div>
 
               <div class="imageItem2">
-                <div class="backZone" id="backZone2Item6"></div>
-
+                <div class="backZoneBackCover">
+                  <div class="backZone" id="backZone2Item6"></div>
+                </div>
                 <div class="imageText">
                   <div><img src="mainPageIcon/minLogo.png" alt="" /></div>
                   <div><p>Mindblowon Universe</p></div>
@@ -520,8 +746,9 @@
               </div>
 
               <div class="imageItem2">
-                <div class="backZone" id="backZone2Item7"></div>
-
+                <div class="backZoneBackCover">
+                  <div class="backZone" id="backZone2Item7"></div>
+                </div>
                 <div class="imageText">
                   <div><img src="mainPageIcon/potLogo.gif" alt="" /></div>
                   <div><p>The Potatoz</p></div>
@@ -539,74 +766,101 @@
         <br />
         <div id="gridItem_container">
           <div class="imageGridItem">
-            <div class="backZone" id="backZoneGridItem1"></div>
-
-            <div class="imageTextGrid">
-              <div><p>Art</p></div>
-            </div>
+            <a href="https://opensea.io/category/art">
+              <div class="backZoneBackCover">
+                <div class="backZone" id="backZoneGridItem1"></div>
+              </div>
+              <div class="imageTextGrid">
+                <div><p>Art</p></div>
+              </div>
+            </a>
           </div>
           <div class="imageGridItem">
-            <div class="backZone" id="backZoneGridItem2"></div>
-
-            <div class="imageTextGrid">
-              <div><p>Music</p></div>
-            </div>
+            <a href="https://opensea.io/category/Music">
+              <div class="backZoneBackCover">
+                <div class="backZone" id="backZoneGridItem2"></div>
+              </div>
+              <div class="imageTextGrid">
+                <div><p>Music</p></div>
+              </div>
+            </a>
           </div>
           <div class="imageGridItem">
-            <div class="backZone" id="backZoneGridItem3"></div>
-
-            <div class="imageTextGrid">
-              <div><p>Trading Cards</p></div>
-            </div>
+            <a href="https://opensea.io/category/trading-cards">
+              <div class="backZoneBackCover">
+                <div class="backZone" id="backZoneGridItem3"></div>
+              </div>
+              <div class="imageTextGrid">
+                <div><p>Trading Cards</p></div>
+              </div>
+            </a>
           </div>
           <!-- 2번째 줄 --><br /><br /><br />
           <div class="imageGridItem">
-            <div class="backZone" id="backZoneGridItem4"></div>
-
-            <div class="imageTextGrid">
-              <div><p>Collectibles</p></div>
-            </div>
+            <a href="https://opensea.io/category/collectibles">
+              <div class="backZoneBackCover">
+                <div class="backZone" id="backZoneGridItem4"></div>
+              </div>
+              <div class="imageTextGrid">
+                <div><p>Collectibles</p></div>
+              </div>
+            </a>
           </div>
 
           <div class="imageGridItem">
-            <div class="backZone" id="backZoneGridItem5"></div>
-
-            <div class="imageTextGrid">
-              <div><p>Photography</p></div>
-            </div>
+            <a href="https://opensea.io/category/photography-category">
+              <div class="backZoneBackCover">
+                <div class="backZone" id="backZoneGridItem5"></div>
+              </div>
+              <div class="imageTextGrid">
+                <div><p>Photography</p></div>
+              </div>
+            </a>
           </div>
 
           <div class="imageGridItem">
-            <div class="backZone" id="backZoneGridItem6"></div>
-
-            <div class="imageTextGrid">
-              <div><p>Utility</p></div>
-            </div>
+            <a href="https://opensea.io/category/utility">
+              <div class="backZoneBackCover">
+                <div class="backZone" id="backZoneGridItem6"></div>
+              </div>
+              <div class="imageTextGrid">
+                <div><p>Utility</p></div>
+              </div>
+            </a>
           </div>
           <!-- 3번째줄  -->
 
           <div class="imageGridItem">
-            <div class="backZone" id="backZoneGridItem7"></div>
-
-            <div class="imageTextGrid">
-              <div><p>Domain Names</p></div>
-            </div>
+            <a href="https://opensea.io/category/domain-names">
+              <div class="backZoneBackCover">
+                <div class="backZone" id="backZoneGridItem7"></div>
+              </div>
+              <div class="imageTextGrid">
+                <div><p>Domain Names</p></div>
+              </div>
+            </a>
           </div>
 
           <div class="imageGridItem">
-            <div class="backZone" id="backZoneGridItem8"></div>
-
-            <div class="imageTextGrid">
-              <div><p>Sports</p></div>
-            </div>
+            <a href="https://opensea.io/category/sports">
+              <div class="backZoneBackCover">
+                <div class="backZone" id="backZoneGridItem8"></div>
+              </div>
+              <div class="imageTextGrid">
+                <div><p>Sports</p></div>
+              </div>
+            </a>
           </div>
 
           <div class="imageGridItem">
-            <div class="backZone" id="backZoneGridItem9"></div>
-
-            <div class="imageTextGrid">
-              <div><p>Virtual Worlds</p></div>
-            </div>
+            <a href="https://opensea.io/category/virtual-worlds">
+              <div class="backZoneBackCover">
+                <div class="backZone" id="backZoneGridItem9"></div>
+              </div>
+              <div class="imageTextGrid">
+                <div><p>Virtual Worlds</p></div>
+              </div>
+            </a>
           </div>
         </div>
         <!-- mainItem끝 -->
@@ -718,7 +972,6 @@
           <div>Terms of Service</div>
         </div>
       </div>
-      <div id="test">우라라라</div>
     </div>
     <script src="index.js"></script>
   </body>

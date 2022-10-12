@@ -33,12 +33,13 @@ html {
   background-color: rgba(0, 0, 0, 0);
   color: white;
   z-index: 1000;
-  transition-duration: 0.5s;
+  transition-duration: 0.6s;
 }
 
 #menuBar_icon {
   display: flex;
   flex-direction: row;
+  cursor: pointer;
 }
 .menuBar_text {
   margin-top: 10px;
@@ -103,33 +104,57 @@ input {
   height: fit-content;
   /* background: wheat; */
 }
+
 .dropdown {
   display: inline-block;
-
   position: relative;
+  /* overflow: hidden; */
+  /* animation: dropMenu 1s; */
 }
+.dropList {
+  visibility: hidden;
+  opacity: 0;
+  /* animation: dropMenu 1s; */
+}
+.dropList:hover {
+  visibility: visible;
+  opacity: 1;
+  /* animation: dropMenu 1s; */
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
   z-index: 10;
   width: 12rem;
   text-decoration: none;
+  color: black;
+  overflow: hidden;
+
+  animation: dropMenu 0.5s;
+  transition: height ease-in-out 3s 0s;
   background-color: white;
   border-radius: 10px;
   box-shadow: 1px 1px 10px 1px grey;
-  margin-top: 2rem;
+  /* top: 1.7rem; */
   left: -1rem;
   border-top: none;
   cursor: pointer;
 }
 .dropdown-content > div > img {
   width: 20px;
+  /* animation: dropMenu 1s; */
 }
 .dropdown-content > div {
   padding: 0.5rem;
   padding-bottom: 0.2rem;
   opacity: 0.5;
-  transition: left 0.5s ease-out;
+
+  text-decoration: none;
+  visibility: visible;
+  opacity: 1;
+  color: black;
+  /* animation: dropMenu 1s; */
 }
 
 .dropdown-content a {
@@ -143,7 +168,11 @@ input {
   justify-content: left;
   align-items: center;
   font-size: 0.9rem;
-  transition: left 0.5s ease-out;
+  /* animation: dropMenu 1s; */
+
+  visibility: visible;
+  opacity: 1;
+  color: black;
 }
 
 .dropdown-content a:last-child {
@@ -151,12 +180,81 @@ input {
 }
 .dropdown:hover .dropdown-content {
   display: block;
-  transition: left 0.5s ease-out;
+
+  /* animation: dropMenu 1s; */
+
+  text-decoration: none;
+}
+#searchDrop {
+  /* width: 50rem; */
+  width: 45vw;
+  animation: ropMenuSearch 0.5s;
+}
+.searchDrop a:last-child {
+  border-bottom: none;
 }
 
+.searchDrop:hover {
+  border-bottom: none;
+}
+/* 
+.search: .dropdown-content {
+  display: block;
+} */
+.dropdown-content:hover {
+  display: block;
+
+  /* animation: dropMenu 1s; */
+  text-decoration: none;
+}
+#stats {
+  animation: dropMenu2 0.5s;
+}
+#res {
+  animation: dropMenu3 0.5s;
+}
 a > div > img {
   width: 25px;
   margin-right: 0.5rem;
+}
+@keyframes dropMenu {
+  0% {
+    height: 100%;
+  }
+
+  100% {
+    height: 2215%;
+  }
+}
+
+@keyframes dropMenu2 {
+  0% {
+    height: 100%;
+  }
+
+  100% {
+    height: 370%;
+  }
+}
+
+@keyframes dropMenu3 {
+  0% {
+    height: 100%;
+  }
+
+  100% {
+    height: 1645%;
+  }
+}
+
+@keyframes dropMenuSearch {
+  0% {
+    height: 100%;
+  }
+
+  100% {
+    height: 500%;
+  }
 }
 
 /* -------------------------------------- */
@@ -302,6 +400,11 @@ video {
   justify-content: space-between;
 }
 
+#topList {
+  display: flex;
+  justify-content: space-between;
+}
+
 #trCategory {
   display: flex;
   font-size: 2rem;
@@ -314,29 +417,52 @@ video {
 }
 
 /* trending 누르면 hr1, top누르면 hr2 */
-.hr1 {
+#hr1 {
   border: solid 0.1px black;
-  display: none;
+  display: block;
   width: 9rem;
   position: absolute;
 }
-.hr2 {
+#hr2 {
   border: solid 0.1px black;
   width: 3.5rem;
   left: 14rem;
   position: absolute;
+  display: none;
 }
 
 #mainItemList {
   padding: 3rem;
+  position: relative;
 }
 
+.category {
+  cursor: pointer;
+}
+
+/* trendingItemList 를 none하면 hr3의 margin-bottom 35rem
+  topItemList 를 none하면 hr3의 margin 0
+*/
 #trendingItemList {
   display: flex;
+  z-index: -99;
   margin-bottom: 50px;
 }
+#topItemList {
+  width: 102.1rem;
+  display: flex;
+  margin-bottom: 50px;
+  position: absolute;
+  top: 8.15rem;
+  font-family: "Poppins-Medium", sans-serif;
 
-#listName {
+  /* 8.6 */
+}
+#hr3 {
+  margin-bottom: 0rem;
+}
+
+.listName {
   display: flex;
   font-size: 0.6rem;
   color: gray;
@@ -362,15 +488,20 @@ video {
 .kindButton:first-child {
   margin-right: 1rem;
 }
-.trendingItem {
+.trendingItem,
+.topItem {
   width: 45%;
 }
 .trendingItem:first-child {
   margin-right: 7rem;
 }
-
+.topItem:first-child {
+  margin-right: 7rem;
+}
 .displayFlex {
   display: flex;
+  width: 12rem;
+  justify-content: space-between;
 }
 
 #listNameRight {
@@ -378,7 +509,7 @@ video {
   justify-content: space-between;
 }
 
-#listOneItem {
+.listOneItem {
   display: flex;
   justify-content: space-between;
   line-height: 5.5rem;
@@ -386,11 +517,27 @@ video {
   overflow: unset;
 }
 
-#listOneItem > div > div > img {
+.listSearchItem {
+  display: flex;
+  justify-content: space-between;
+  line-height: 5.5rem;
+  white-space: nowrap;
+  overflow: unset;
+}
+
+.listSearchItem > div > div > img {
   width: 4rem;
   border-radius: 10px;
 }
 
+.listOneItem > div > div > img {
+  width: 4rem;
+  border-radius: 10px;
+}
+
+#listOne {
+  display: none;
+}
 .list {
   font-size: 1.1rem;
   color: gray;
@@ -398,21 +545,21 @@ video {
   margin: 0;
 }
 
-#itemSector1 {
+.itemSector1 {
   display: flex;
   width: 23rem;
   font-size: 0.9rem;
   align-items: center;
   overflow: hidden;
 }
-#itemSector1 > div {
+.itemSector1 > div {
   margin-left: 20px;
 }
-#itemSector1 > :first-child {
+.itemSector1 > :first-child {
   margin-left: 0;
 }
 
-#itemSector2 {
+.itemSector2 {
   display: flex;
   justify-content: space-between;
   width: 12rem;
@@ -476,7 +623,10 @@ video {
   /* float: left; */
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  transition-duration: 0.3s;
+  overflow: hidden;
 }
+
 #backZoneItem1 {
   background: url(mainPageIcon/preview.png);
   background-size: cover;
@@ -636,7 +786,7 @@ video {
 
   float: left;
   width: 530px;
-
+  overflow: hidden;
   display: flex;
   /* position: absolute; */
   transform: translate(50, 50);
@@ -644,15 +794,50 @@ video {
   margin-bottom: 30px;
 }
 
-.backZone:hover {
-  background-size: contain;
+.coin {
+  display: flex;
+  flex-direction: column;
+  line-height: 1rem;
+  align-items: flex-end;
+  justify-content: center;
+
+  padding-bottom: 1.2rem;
 }
 
+.volumePercentUp {
+  color: rgb(52, 199, 123);
+}
+.volumePercentDown {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.backZoneBackCover {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.backZone:hover {
+  scale: 1.1;
+  overflow: hidden;
+  height: 335px;
+  border-radius: 15px;
+}
+.backZone::after {
+  overflow: hidden;
+  border-radius: 15px;
+}
+::after {
+  box-sizing: border-box;
+}
 .imageText {
   z-index: 1;
   display: flex;
   padding: 16px;
-
+  /* background-color: white; */
   margin-top: -30px;
   align-items: flex-end;
   border-bottom-right-radius: 15px;
@@ -791,6 +976,7 @@ video {
   width: calc(90% / 4 * 3);
   height: 2.5rem;
   padding: 0.5rem;
+  color: black;
   background-color: white;
 }
 
@@ -876,11 +1062,4 @@ button {
 
 #servicesRight:first-child {
   margin: 0;
-}
-
-#test {
-  background-color: black;
-  color: white;
-  position: fixed;
-  bottom: 1px;
 }

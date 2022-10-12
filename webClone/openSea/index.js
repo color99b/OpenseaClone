@@ -204,7 +204,6 @@ image_container2.addEventListener("mouseleave", function () {
 
 const menu = document.getElementById("menuBar");
 const main = document.getElementById("mainCenter");
-const testScroll = document.getElementById("test");
 
 function scrollDom(e) {
   menu.scrollTop = Number(e.target.value);
@@ -214,7 +213,7 @@ const inputText = document.getElementById("search");
 const menuSearch = document.getElementById("menuBar_search");
 
 const menuBarIcon = document.querySelectorAll(".menuIcon");
-console.log(menuBarIcon);
+
 window.addEventListener("scroll", function () {
   let currentScrollValue = scrollY;
   if (currentScrollValue != 0) {
@@ -233,5 +232,93 @@ window.addEventListener("scroll", function () {
       menuBarIcon[i].style.filter = "invert()";
     }
   }
-  testScroll.innerText = "currentScrollValues is " + currentScrollValue;
+});
+
+const home = document.getElementById("menuBar_icon");
+
+home.addEventListener("click", function () {
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+});
+
+let filter = function () {
+  const listItem = document.getElementsByClassName("listOneItem");
+  const listSearchItem = document.getElementsByClassName("listSearchItem");
+  const searchItem = document.getElementById("search").value.toLowerCase();
+  for (let i = 0; i < listItem.length; i++) {
+    let name = listItem[i].getElementsByClassName("name");
+    if (name[0].innerHTML.toLowerCase().indexOf(searchItem) != -1) {
+      listItem[i].style.display = "flex";
+    } else {
+      listItem[i].style.display = "none";
+    }
+  }
+
+  for (let i = 0; i < listSearchItem.length; i++) {
+    let searchName = listSearchItem[i].getElementsByClassName("searchName");
+    if (searchName[0].innerHTML.toLowerCase().indexOf(searchItem) != -1) {
+      listSearchItem[i].style.display = "flex";
+    } else {
+      listSearchItem[i].style.display = "none";
+    }
+  }
+};
+
+const trend = document.getElementById("trending");
+const topView = document.getElementById("top");
+let viewList = function (num) {
+  const trendList = document.getElementById("trendingItemList");
+  const topList = document.getElementById("topItemList");
+  const hr1 = document.getElementById("hr1");
+  const hr2 = document.getElementById("hr2");
+  const hr3 = document.getElementById("hr3");
+  if (num == 1) {
+    trendList.style.display = "flex";
+    topList.style.display = "none";
+    hr3.style.marginBottom = "0";
+    hr1.style.display = "block";
+    hr2.style.display = "none";
+  } else if (num == 2) {
+    trendList.style.display = "none";
+    topList.style.display = "flex";
+    hr3.style.marginBottom = "33.1rem";
+    hr1.style.display = "none";
+    hr2.style.display = "block";
+  }
+};
+viewList(1);
+// trend.addEventListener("click", viewList(1));
+// topView.addEventListener("click", viewList(2));
+
+let hrs = document.getElementById("hrs");
+let mins = document.getElementById("mins");
+let secs = document.getElementById("secs");
+const maxHrs = 24;
+const maxMins = 60;
+const maxSecs = 60;
+let secTimer = function () {
+  setInterval(() => {
+    secs.innerText = +secs.innerText - 1;
+    if (secs.innerText < 0) {
+      secs.innerText = maxSecs;
+      mins.innerText = +mins.innerText - 1;
+      if (mins.innerText < 0) {
+        mins.innerText = maxMins;
+        hrs.innerText = +hrs.innerText - 1;
+        if (hrs.innerText < 0) {
+          hrs.innerText = maxHrs;
+        }
+      }
+    }
+  }, 1000);
+};
+
+secTimer();
+
+inputText.addEventListener("focus", function () {
+  const search = document.getElementById("searchDrop");
+  search.style.display = "block";
+});
+inputText.addEventListener("blur", function () {
+  const search = document.getElementById("searchDrop");
+  search.style.display = "none";
 });
