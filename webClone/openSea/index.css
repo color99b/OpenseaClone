@@ -187,8 +187,16 @@ input {
 }
 #searchDrop {
   /* width: 50rem; */
-  width: 45vw;
-  animation: ropMenuSearch 0.5s;
+  width: 40vw;
+  min-width: 40rem;
+  animation: dropMenuSearch 0.5s;
+  /* overflow: hidden; */
+  max-height: 77vh;
+}
+
+.searchA:hover {
+  box-shadow: 1px 1px 10px 1px grey;
+  transition-duration: 0.5s;
 }
 .searchDrop a:last-child {
   border-bottom: none;
@@ -210,9 +218,22 @@ input {
 #stats {
   animation: dropMenu2 0.5s;
 }
+#stats > a:hover {
+  box-shadow: 1px 1px 10px 1px grey;
+  transition-duration: 0.5s;
+}
 #res {
   animation: dropMenu3 0.5s;
 }
+
+#res > a:hover,
+#res > div > img:hover {
+  box-shadow: 1px 1px 10px 1px grey;
+  transition-duration: 0.5s;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 a > div > img {
   width: 25px;
   margin-right: 0.5rem;
@@ -253,7 +274,7 @@ a > div > img {
   }
 
   100% {
-    height: 500%;
+    height: 2800%;
   }
 }
 
@@ -282,7 +303,6 @@ a > div > img {
   background: url(mainPageIcon/preview.png);
   background-repeat: no-repeat;
   background-position: center;
-
   height: 600px;
   filter: blur(15px);
 }
@@ -296,6 +316,7 @@ a > div > img {
   justify-content: flex-end;
   margin-bottom: 3rem;
   padding-bottom: 2rem;
+
   /* background-color: black; */
 }
 
@@ -338,7 +359,6 @@ a > div > img {
 #mainTime {
   display: flex;
   justify-content: space-evenly;
-
   align-items: center;
   font-size: 0.8rem;
   text-align: center;
@@ -366,6 +386,7 @@ a > div > img {
   border-radius: 15px;
   font-size: 1rem;
   padding: 15px;
+  cursor: pointer;
 }
 
 #videoBox {
@@ -392,6 +413,8 @@ video {
   width: 90%;
   top: 45%;
   left: 50%;
+  cursor: default;
+
   transform: translate(-50%, -50%);
 }
 
@@ -516,6 +539,10 @@ video {
   white-space: nowrap;
   overflow: unset;
 }
+.listOneItem:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 10px;
+}
 
 .listSearchItem {
   display: flex;
@@ -523,6 +550,7 @@ video {
   line-height: 5.5rem;
   white-space: nowrap;
   overflow: unset;
+  height: 7vh;
 }
 
 .listSearchItem > div > div > img {
@@ -555,6 +583,7 @@ video {
 .itemSector1 > div {
   margin-left: 20px;
 }
+
 .itemSector1 > :first-child {
   margin-left: 0;
 }
@@ -563,9 +592,10 @@ video {
   display: flex;
   justify-content: space-between;
   width: 12rem;
-  align-items: flex-end;
+  align-items: center;
   font-size: 0.85rem;
   text-align: right;
+  overflow: hidden;
 }
 
 .fontBlack {
@@ -591,6 +621,7 @@ video {
 
 #gridItem_container {
   height: 80rem;
+  width: 100%;
 }
 #image_container > div,
 #image_container2 > div {
@@ -780,8 +811,7 @@ video {
   display: block;
 }
 .imageItem,
-.imageItem2,
-.imageGridItem {
+.imageItem2 {
   display: inline;
 
   float: left;
@@ -793,7 +823,27 @@ video {
   flex-direction: column;
   margin-bottom: 30px;
 }
+.imageGridItem {
+  display: inline;
 
+  float: left;
+  width: 32%;
+  overflow: hidden;
+  display: flex;
+  /* position: absolute; */
+  transform: translate(50, 50);
+  flex-direction: column;
+  margin-bottom: 30px;
+  margin-right: 1rem;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+.wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
 .coin {
   display: flex;
   flex-direction: column;
@@ -801,7 +851,7 @@ video {
   align-items: flex-end;
   justify-content: center;
 
-  padding-bottom: 1.2rem;
+  padding-top: 0.8rem;
 }
 
 .volumePercentUp {
@@ -940,6 +990,7 @@ a {
   font-size: 0.9rem;
   padding: 3rem 10rem 1rem 10rem;
   font-family: "Poppins-Medium", sans-serif;
+  cursor: default;
 }
 
 .big {
@@ -1029,6 +1080,11 @@ button {
 .moreList {
   width: calc(100% / 7);
   margin-bottom: 3rem;
+  cursor: pointer;
+}
+.dropList:hover {
+  box-shadow: 1px 1px 10px 1px grey;
+  transition-duration: 0.5s;
 }
 
 .middle {

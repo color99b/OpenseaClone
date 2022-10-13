@@ -242,16 +242,16 @@ home.addEventListener("click", function () {
 
 let filter = function () {
   const listItem = document.getElementsByClassName("listOneItem");
-  const listSearchItem = document.getElementsByClassName("listSearchItem");
+  const listSearchItem = document.getElementsByClassName("searchA");
   const searchItem = document.getElementById("search").value.toLowerCase();
-  for (let i = 0; i < listItem.length; i++) {
-    let name = listItem[i].getElementsByClassName("name");
-    if (name[0].innerHTML.toLowerCase().indexOf(searchItem) != -1) {
-      listItem[i].style.display = "flex";
-    } else {
-      listItem[i].style.display = "none";
-    }
-  }
+  // for (let i = 0; i < listItem.length; i++) {
+  //   let name = listItem[i].getElementsByClassName("name");
+  //   if (name[0].innerHTML.toLowerCase().indexOf(searchItem) != -1) {
+  //     listItem[i].style.display = "flex";
+  //   } else {
+  //     listItem[i].style.display = "none";
+  //   }
+  // }
 
   for (let i = 0; i < listSearchItem.length; i++) {
     let searchName = listSearchItem[i].getElementsByClassName("searchName");
@@ -314,11 +314,19 @@ let secTimer = function () {
 
 secTimer();
 
-inputText.addEventListener("focus", function () {
+// inputText.addEventListener("blur", function () {
+//   const search = document.getElementById("searchDrop");
+//   search.style.display = "none";
+// });
+
+inputText.onfocus = () => {
   const search = document.getElementById("searchDrop");
   search.style.display = "block";
-});
-inputText.addEventListener("blur", function () {
+};
+
+inputText.onblur = () => {
   const search = document.getElementById("searchDrop");
-  search.style.display = "none";
-});
+  setTimeout(() => {
+    search.style.display = "none";
+  }, 100);
+};
