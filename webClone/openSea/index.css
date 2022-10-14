@@ -410,9 +410,9 @@ video {
   padding-left: 15px;
   padding-right: 15px;
   position: absolute;
-  width: 90%;
-  top: 45%;
-  left: 50%;
+  width: 80%;
+  top: 40vh;
+  left: 50vw;
   cursor: default;
 
   transform: translate(-50%, -50%);
